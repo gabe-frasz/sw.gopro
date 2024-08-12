@@ -12,6 +12,7 @@ Simple Go projects to practice.
 - [ ] Add optional due date
 - [ ] Display human friendly dates with `timediff`
 - [ ] Create README with usage instructions
+- [ ] Document CLI commands
 
 ### qslsp
 
