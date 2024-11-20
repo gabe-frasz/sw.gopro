@@ -14,6 +14,17 @@ Simple Go projects to practice.
 - [ ] Create README with usage instructions
 - [ ] Document CLI commands
 
+### calculator-api
+
+- [x] Input validation
+- [ ] Error feedback
+- [ ] Logging
+- [ ] CORS
+- [ ] Rate limiting
+- [ ] Token authentication
+- [ ] Tracking of calculations (DB)
+- [ ] Support for floating point numbers
+
 ### qslsp
 
 - [ ] start o_O
