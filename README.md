@@ -27,7 +27,10 @@ Simple Go projects to practice.
 
 ### qslsp
 
-- [ ] start o_O
+- [ ] `textDocument/formatting`
+- [ ] `textDocument/references`
+- [ ] `workspace/symbol`
+- [ ] `textDocument/rename`
 
 ## Aknowledgements
 
