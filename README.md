@@ -4,15 +4,15 @@ Simple Go projects to practice.
 
 ## TODO
 
-### Tasks
+### tasks
 
 - [x] Change CSV file to SQLite
-- [ ] Format output using `tabwriter`
+- [x] Format output using `tabwriter`
 - [ ] Colorize output
 - [ ] Add optional due date
-- [ ] Display human friendly dates with `timediff`
+- [x] Display human friendly dates with `timediff`
 - [ ] Create README with usage instructions
-- [ ] Document CLI commands
+- [x] Document CLI commands
 
 ### calculator-api
 

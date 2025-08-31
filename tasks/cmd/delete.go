@@ -12,7 +12,7 @@ import (
 
 var deleteCmd = &cobra.Command{
 	Use:   "delete <taskid>",
-	Short: "A brief description of your command",
+	Short: "delete a task",
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		id, err := strconv.Atoi(args[0])

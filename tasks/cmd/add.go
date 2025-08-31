@@ -12,7 +12,7 @@ import (
 
 var addCmd = &cobra.Command{
 	Use:   "add <description>",
-	Short: "A brief description of your command",
+	Short: "add a new task",
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("add called")

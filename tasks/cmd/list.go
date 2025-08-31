@@ -3,12 +3,14 @@ package cmd
 import (
 	"database/sql"
 	"fmt"
+	"os"
 	"strconv"
-	"time"
+	"text/tabwriter"
 
 	"github.com/gabe-frasz/gopro/tasks/internal/app/entity"
 	"github.com/gabe-frasz/gopro/tasks/internal/app/usecases"
 	"github.com/gabe-frasz/gopro/tasks/internal/infra/database/repository"
+	"github.com/mergestat/timediff"
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +18,7 @@ var (
 	allFlag bool
 	listCmd = &cobra.Command{
 		Use:   "list",
-		Short: "A brief description of your command",
+		Short: "list tasks",
 		Run: func(cmd *cobra.Command, args []string) {
 			db, err := sql.Open("sqlite3", "tasks.db")
 			if err != nil {
@@ -41,9 +43,19 @@ var (
 				}
 			}
 
+			w := tabwriter.NewWriter(os.Stdout, 0, 0, 1, ' ', tabwriter.Debug)
+
+			fmt.Fprintln(w, "DESCRIPTION\t DONE\t CREATED AT")
+
 			for _, task := range tasks {
-				fmt.Println(task.Description + " | " + strconv.FormatBool(task.Done) + " | " + task.CreatedAt.Local().Format(time.RFC3339))
+				desc := task.Description
+				done := strconv.FormatBool(task.Done)
+        createdAt := timediff.TimeDiff(task.CreatedAt)
+
+				fmt.Fprintln(w, desc+"\t "+done+"\t "+createdAt)
 			}
+
+			w.Flush()
 		},
 	}
 )
