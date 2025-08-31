@@ -27,6 +27,7 @@ Simple Go projects to practice.
 
 ### qslsp
 
+- [ ] use [gopher-lua](https://github.com/yuin/gopher-lua) to serve a real LSP server for Lua
 - [ ] `textDocument/formatting`
 - [ ] `textDocument/references`
 - [ ] `workspace/symbol`
