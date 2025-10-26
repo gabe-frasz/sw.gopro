@@ -11,7 +11,6 @@ Simple Go projects to practice.
 - [ ] Colorize output
 - [ ] Add optional due date
 - [x] Display human friendly dates with `timediff`
-- [ ] Create README with usage instructions
 - [x] Document CLI commands
 
 ### calculator-api
@@ -32,6 +31,27 @@ Simple Go projects to practice.
 - [ ] `textDocument/references`
 - [ ] `workspace/symbol`
 - [ ] `textDocument/rename`
+
+#### How to enable custom LSP in Neovim
+
+```lua
+local client = vim.lsp.start_client({
+    name = "qƨlsp",
+    cmd = { "$HOME/path/to/local/qƨlsp" },
+})
+
+if not client then
+       vim.notify("qƨlsp failed to start")
+       return
+end
+
+vim.api.nvim_create_autocmd("FileType", {
+       pattern = "markdown",
+       callback = function()
+               vim.lsp.buf_attach_client(0, client)
+       end,
+})
+```
 
 ## Aknowledgements
 
