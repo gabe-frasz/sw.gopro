@@ -41,15 +41,15 @@ local client = vim.lsp.start_client({
 })
 
 if not client then
-       vim.notify("qƨlsp failed to start")
-       return
+    vim.notify("qƨlsp failed to start")
+    return
 end
 
 vim.api.nvim_create_autocmd("FileType", {
-       pattern = "markdown",
-       callback = function()
-               vim.lsp.buf_attach_client(0, client)
-       end,
+    pattern = "markdown",
+    callback = function()
+        vim.lsp.buf_attach_client(0, client)
+    end,
 })
 ```
 
