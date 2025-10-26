@@ -21,7 +21,6 @@ Simple Go projects to practice.
 - [ ] CORS
 - [ ] Rate limiting
 - [ ] Token authentication
-- [ ] Tracking of calculations (DB)
 - [ ] Support for floating point numbers
 
 ### qslsp
